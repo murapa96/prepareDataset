@@ -19,7 +19,7 @@ def run():
     filenames = os.listdir("output/")
 
     for i,val in enumerate(tqdm(filenames)):
-        audio.split(f"output/{i}/vocals.wav")
+        audio.split(f"output/{val}/vocals.wav")
 
     transcriber.transcribe_audios()
 
