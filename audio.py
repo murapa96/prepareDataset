@@ -22,8 +22,8 @@ def match_target_amplitude(aChunk, target_dBFS):
 
 def split(audio_path):
 	audio = AudioSegment.from_wav(audio_path)
-	min_silence_len = 150 # Cortar el audio si hay 500 milisegundos de silencio
-	silence_thresh = -40 # Defino silencio como cualquier sonido por debajo de -40 dBFS
+	min_silence_len = 500 # Cortar el audio si hay 500 milisegundos de silencio
+	silence_thresh = -50 # Defino silencio como cualquier sonido por debajo de -40 dBFS
 	audio = pydub.effects.normalize(audio)
 
 	chunks = split_on_silence (

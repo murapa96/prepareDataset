@@ -16,7 +16,7 @@ def transcribe_audios():
         audio=os.path.join(audios_directory, filename)
         with sr.AudioFile(audio) as source:
             audio_text = r.listen(source)
-            text = r.recognize_google(audio_text, language = "es-AR")
+            text = r.recognize_google(audio_text, language = "es-ES")
             audios_transcript["audios/" + filename]=text #agregar la transcripcion al diccionario
       except:
         pass
