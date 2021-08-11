@@ -2,7 +2,9 @@ audios/
 downloads/
 output/
 pretrained_models/
-
+cache.txt
+transcript.csv
+.idea/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
