@@ -1,4 +1,4 @@
-# Speech Dataset Generator
+# TTS Dataset Generator
 
 Esta aplicación permite crear _datasets_ para entrenar sintetizadores de _text to speech_. Fue desarrollado por la comunidad Deep-ESP.
 
