@@ -1,11 +1,33 @@
-from pydub import AudioSegment
-import pydub
-from pydub.silence import split_on_silence
 import time
+
+import pydub
+from pydub import AudioSegment
+from pydub.silence import split_on_silence
+from pydub.silence import detect_leading_silence
 
 min_seconds = 2
 max_seconds = 60
-audios_directory = "audios" # Directorio de los archivos wav
+
+def strip_audio(pydub_audio):
+    start_trim = detect_leading_silence(pydub_audio)
+    end_trim = detect_leading_silence(pydub_audio.reverse())
+
+    duration = len(pydub_audio)
+    return pydub_audio[start_trim:duration-end_trim]
+
+# Normalizar audios a un volumen especifico
+def match_target_amplitude(aChunk, target_dBFS):
+	change_in_dBFS = target_dBFS - aChunk.dBFS
+	return aChunk.apply_gain(change_in_dBFS)
+
+def normalize_audio(audio):
+	audio = audio.set_channels(1)
+	audio = audio.set_frame_rate(22050)
+	audio = match_target_amplitude(audio, -22.0)
+	return strip_audio(audio)
+
+
+### OLD STUFF ###
 
 def mp3_to_wav(audio_path):
 	audio = AudioSegment.from_mp3(audio_path)
@@ -14,13 +36,7 @@ def mp3_to_wav(audio_path):
 	audio.export("converted_audio.wav", format = "wav")
 
 
-# Normalizar audios a un volumen especifico
-def match_target_amplitude(aChunk, target_dBFS):
-	change_in_dBFS = target_dBFS - aChunk.dBFS
-	return aChunk.apply_gain(change_in_dBFS)
-
-
-def split(audio_path):
+def split(audio_path, audios_directory="audios"):
 	audio = AudioSegment.from_wav(audio_path)
 	min_silence_len = 500 # Cortar el audio si hay 500 milisegundos de silencio
 	silence_thresh = -50 # Defino silencio como cualquier sonido por debajo de -40 dBFS

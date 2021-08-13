@@ -1,5 +1,5 @@
 rm -rf audios/*
 rm -rf output/*
 rm -rf downloads/*
-rm cache.txt
-rm transcript.csv
+rm -f cache.txt
+rm -f transcript.csv

@@ -1,4 +1,4 @@
-audios/
+audios/*.wav
 downloads/
 output/
 pretrained_models/

@@ -3,3 +3,4 @@ pydub
 spleeter
 SpeechRecognition
 tqdm
+webvtt-py
