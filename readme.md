@@ -1,6 +1,6 @@
 # TTS Dataset Generator
 
-Esta aplicación permite crear _datasets_ para entrenar sintetizadores de _text to speech_. Fue desarrollado por la comunidad de telegram _[Deep-ESP](https://t.me/deepEspVoces)_.
+Esta aplicación permite crear _datasets_ para entrenar sintetizadores de _text to speech_. Fue desarrollado por la comunidad de telegram [Deep-ESP](https://t.me/deepEspVoces).
 
 ## Requisitos
 
