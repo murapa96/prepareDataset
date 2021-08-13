@@ -1,13 +1,13 @@
 # Speech Dataset Generator
 
-This app allows to create datasets for training text to speech synths.
+Esta aplicación permite crear _datasets_ para entrenar sintetizadores de _text to speech_. Fue desarrollado por la comunidad Deep-ESP.
 
-## Requirements
+## Requisitos
 
 - Python 3
-- Python packages (Try something like: `python -m pip install -r requirements.txt`)
+- Python packages (Podés instalarlos haciendo algo asi: `python -m pip install -r requirements.txt`)
 
 
-## Usage
+## Ejemplo de uso
 
-You can get started testing it by running something like `python main.py urls.txt`
+Puede comenzar a probarlo ejecutando algo como `python main.py urls.txt`
