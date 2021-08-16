@@ -7,7 +7,6 @@ Esta aplicación permite crear _datasets_ para entrenar sintetizadores de _text 
 - Python 3
 - Python packages (Podés instalarlos haciendo algo asi: `python -m pip install -r requirements.txt`)
 
-
 ## Ejemplo de uso
 
 Puede comenzar a probarlo ejecutando algo como `python main.py urls.txt`

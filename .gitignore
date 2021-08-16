@@ -1,6 +1,7 @@
 audios/*.wav
 downloads/
 output/
+labels/*.txt
 pretrained_models/
 cache.txt
 transcript.csv
