@@ -19,6 +19,8 @@ Luego ejecutar `python main.py download urls.txt`
 
 Abrir los audios descargados en audacity, tambien importar los subtitulos yendo a File -> Import -> Labels. Corregir el timing de los labels.
 
+![](demo.jpg)
+
 ### 3. Cortar audios y generar dataset final
 
 Ya podemos cortar los audios y obtener el dataset final
