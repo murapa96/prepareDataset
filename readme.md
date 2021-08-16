@@ -21,6 +21,8 @@ Abrir los audios descargados en audacity, tambien importar los subtitulos yendo 
 
 ![](demo.jpg)
 
+Cuando se hayan corregido los errores de timing exportar los labels y sobreescribir los anteriores. File -> Export -> Export Labels
+
 ### 3. Cortar audios y generar dataset final
 
 Ya podemos cortar los audios y obtener el dataset final
